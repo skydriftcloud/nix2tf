@@ -43,7 +43,7 @@
             output.${name} = attrs;
           };
 
-          mkTf = list: toJSON (foldl' recursiveUpdate { } list);
+          mkTf = list: nixpkgs.lib.toJSON (foldl' recursiveUpdate { } list);
         };
     };
 }
